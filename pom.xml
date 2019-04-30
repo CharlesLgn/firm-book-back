@@ -11,13 +11,13 @@
     <modules>
         <module>ProjetJavaEEMetier</module>
         <module>ProjetJavaEEService</module>
+        <module>ProjetJavaEEBDD</module>
     </modules>
 
     <properties>
         <junit.version>4.12</junit.version>
         <assertJ.version>3.11.1</assertJ.version>
         <exec.maven.plugin.version>1.5.0</exec.maven.plugin.version>
-        <postgresql.driver.version>9.4.1212.jre7</postgresql.driver.version>
         <mysql.driver.version>8.0.15</mysql.driver.version>
         <mockito.version>2.18.0</mockito.version>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -41,12 +41,6 @@
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
                 <version>${mockito.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>${postgresql.driver.version}</version>
             </dependency>
 
             <dependency>
@@ -76,10 +70,6 @@
         </dependency>
 
         <!-- DataBase Connector -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

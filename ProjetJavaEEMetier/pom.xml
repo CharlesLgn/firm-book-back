@@ -12,6 +12,10 @@
     <groupId>fr.metz.iut.licencepro.projet.metier</groupId>
     <artifactId>ProjetJavaEEMetier</artifactId>
 
+    <properties>
+        <mysql.driver.version>8.0.15</mysql.driver.version>
+    </properties>
+
     <dependencies>
         <!-- framework BDD -->
         <dependency>
@@ -25,9 +29,9 @@
             <version>5.0.0.Final</version>
         </dependency>
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.4.1212.jre7</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.driver.version}</version>
         </dependency>
     </dependencies>
 
