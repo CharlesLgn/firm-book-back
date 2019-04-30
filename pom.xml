@@ -22,8 +22,6 @@
         <mockito.version>2.18.0</mockito.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <running.mode>PROD</running.mode>
-        <sgbd.implem>com.licencepro.dao.MysqlDbConnection</sgbd.implem>
     </properties>
 
     <dependencyManagement>
@@ -58,43 +56,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>${exec.maven.plugin.version}</version>
-                    <configuration>
-                        <mainClass>com.licencepro.servlet.cours1.Main</mainClass>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>launch-main</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
     <dependencies>
         <!-- Test -->
