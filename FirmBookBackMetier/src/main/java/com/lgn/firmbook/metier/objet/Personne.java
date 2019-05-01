@@ -1,12 +1,15 @@
 package com.lgn.firmbook.metier.objet;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
-@Table(name = "personne")
-public class Personne {
+@Table(name = "person")
+@XmlRootElement
+public class Personne implements Serializable {
   @Id
   @Column(name = "id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +20,6 @@ public class Personne {
   private String prenom;
   @Column(name = "birth_date")
   private Date dateDeNaissance;
-
   @OneToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "sexe_id")
   private Sexe sexe;

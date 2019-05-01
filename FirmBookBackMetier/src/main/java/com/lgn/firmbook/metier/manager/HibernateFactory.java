@@ -1,7 +1,9 @@
 package com.lgn.firmbook.metier.manager;
 
+import java.util.List;
 import java.util.logging.*;
 
+import com.lgn.firmbook.metier.objet.Personne;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
@@ -56,4 +58,6 @@ public abstract class HibernateFactory<T> {
         session.getTransaction().commit();
         session.close();
     }
+
+    public abstract List<T> getAll() ;
 }

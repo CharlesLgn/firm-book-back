@@ -1,12 +1,17 @@
 package com.lgn.firmbook.metier.objet;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "utilisateur")
-public class Utilisateur {
+@XmlRootElement
+public class Utilisateur implements Serializable {
+  @Id
   @Column(name = "login")
   private String login;
+  @Id
   @Column(name = "password")
   private String motDePasse;
   @Column(name = "level")

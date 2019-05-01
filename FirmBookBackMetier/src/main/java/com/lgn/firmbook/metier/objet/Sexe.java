@@ -1,10 +1,13 @@
 package com.lgn.firmbook.metier.objet;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "sexe")
-public class Sexe {
+@XmlRootElement
+public class Sexe implements Serializable {
   @Id
   @Column(name = "id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)

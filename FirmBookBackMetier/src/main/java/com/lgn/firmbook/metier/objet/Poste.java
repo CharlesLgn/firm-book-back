@@ -1,10 +1,13 @@
 package com.lgn.firmbook.metier.objet;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "poste")
-public class Poste {
+@XmlRootElement
+public class Poste implements Serializable {
 
   @Id
   @Column(name = "id")
@@ -14,10 +17,10 @@ public class Poste {
   private String libelle;
   @Column(name = "level")
   private int niveau;
-  @OneToOne(fetch = FetchType.EAGER)
+  @OneToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "person_id")
   private Personne personne;
-  @OneToOne(fetch = FetchType.EAGER)
+  @OneToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "boss_id")
   private Personne responssable;
 

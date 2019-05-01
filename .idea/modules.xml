@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FirmBookBack.iml" filepath="$PROJECT_DIR$/FirmBookBack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FirmBookBackBDD/FirmBookBackBDD.iml" filepath="$PROJECT_DIR$/FirmBookBackBDD/FirmBookBackBDD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FirmBookBackMetier/FirmBookBackMetier.iml" filepath="$PROJECT_DIR$/FirmBookBackMetier/FirmBookBackMetier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FirmBookBackService/FirmBookBackService.iml" filepath="$PROJECT_DIR$/FirmBookBackService/FirmBookBackService.iml" />
+    </modules>
+  </component>
+</project>

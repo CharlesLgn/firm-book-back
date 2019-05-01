@@ -8,7 +8,9 @@ public class DeletePersonProcess {
   public boolean delete(int id) {
     PersonneManager manager = new PersonneManager();
     Personne personne = manager.read(id);
-    manager.delete(personne);
+    if (personne != null) {
+      manager.delete(personne);
+    }
     return true;
   }
 }

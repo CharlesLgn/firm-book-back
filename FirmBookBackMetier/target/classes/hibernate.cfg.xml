@@ -13,6 +13,7 @@
 
         <mapping class="com.lgn.firmbook.metier.objet.Personne"/>
         <mapping class="com.lgn.firmbook.metier.objet.Poste"/>
+        <mapping class="com.lgn.firmbook.metier.objet.Sexe"/>
         <mapping class="com.lgn.firmbook.metier.objet.Utilisateur"/>
     </session-factory>
 </hibernate-configuration>
