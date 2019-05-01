@@ -1,20 +1,29 @@
-# Firm Book
+# Firm Book (Back)
 [![Ligony Charles](https://img.shields.io/badge/Charles-LinkedIn-1E90E7.svg)](https://www.linkedin.com/in/charles-ligony-893177134/)
 
 Project For 3rd year University   
+Made using React
+
+[![font](https://img.shields.io/badge/FirmBook-Back-41A48D.svg)](https://github.com/CharlesLgn/firm-book-front)
 
 ***
 
-___The goal was to made an than which can :___
+___The goal was to made an app which can :___
 
+ -  Add a person in the directory
+ -  Update a person in the directory
+ -  Delete a person in the directory 
+ -  Researsh people on the app
  
 ***
 
 ___Rules of the project :___
 
- - langage          : `java`
- - Famework front   :  
-
+ - Language : `Java`
+ - Rest-Api : `Jersey`
+ - Build : `Maven`
+ - ORM : `Hibernate`
+ 
 ***
   
-Grades  :   ![Challouatte Cyril](https://img.shields.io/badge/17-20-00BB00.svg)
+Grades  :   ![grade](https://img.shields.io/badge/17-20-00BB00.svg)
