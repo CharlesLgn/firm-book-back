@@ -1,0 +1,3 @@
+com\lgn\firmbook\service\PersonneService.class
+com\lgn\firmbook\service\UtilisateurService.class
+com\lgn\firmbook\service\helper\ConnectionHelper.class

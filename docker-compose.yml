@@ -2,12 +2,23 @@ version: '3'
 services:
   mysql:
     image: mysql:5.6
-    ports:
-      - "3306:3306"
     volumes:
-      - ./ProjetJavaEEBDD/src/resources:/docker-entrypoint-initdb.d
+      - ./FirmBookBackBDD/src/resources/init.sql:/docker-entrypoint-initdb.d/dump.sql
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: root
-      MYSQL_PASSWORD: sql
-      MYSQL_DATABASE: sql
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+  webapp:
+    image: tomcat:9.0.19-jre8
+    ports:
+      - "8080:8080"
+    links:
+      - mysql
+    volumes:
+      - ./FirmBookBackBDD/src/main/resources/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - ./FirmBookBackService/target/firm-book-back.war:/usr/local/tomcat/webapps/ROOT.war
+      - ./FirmBookBackService/target/firm-book-back:/usr/local/tomcat/webapps/ROOT
