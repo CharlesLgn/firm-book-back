@@ -18,7 +18,7 @@ public class PersonneService {
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.APPLICATION_JSON)
   public Response createPerson(@HeaderParam("Authorization") String auth, final Personne personne){
-    return new ConnectionHelper().connetion(auth, utilisateur -> {
+    return new ConnectionHelper().connexion(auth, utilisateur -> {
       Personne res = new CreatePersonProcess().create(personne);
       return Response.ok().entity(res).build();
     });
@@ -28,7 +28,7 @@ public class PersonneService {
   @Path("/{id}")
   @Consumes(MediaType.APPLICATION_JSON)
   public Response updatePerson(@HeaderParam("Authorization") String auth, @PathParam("id") int id, DataPerson dataPerson) {
-    return new ConnectionHelper().connetion(auth, utilisateur -> {
+    return new ConnectionHelper().connexion(auth, utilisateur -> {
       new UpdatePersonProcess().update(id, dataPerson);
       return Response.ok().build();
     });
@@ -38,7 +38,7 @@ public class PersonneService {
   @Path("/{id}")
   @Produces(MediaType.APPLICATION_JSON)
   public Response getPerson(@HeaderParam("Authorization") String auth, @PathParam("id") int id) {
-    return new ConnectionHelper().connetion(auth, utilisateur -> {
+    return new ConnectionHelper().connexion(auth, utilisateur -> {
       Personne res = new GetPersonProcess().get(id);
       return Response.ok().entity(res).build();
     });
@@ -47,7 +47,7 @@ public class PersonneService {
   @DELETE
   @Path("/{id}")
   public Response deletePerson(@HeaderParam("Authorization") String auth, @PathParam("id") int id) {
-    return new ConnectionHelper().connetion(auth, utilisateur -> {
+    return new ConnectionHelper().connexion(auth, utilisateur -> {
       new DeletePersonProcess().delete(id);
       return Response.ok().build();
     });

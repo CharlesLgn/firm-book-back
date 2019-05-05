@@ -17,10 +17,10 @@ public class Poste implements Serializable {
   private String libelle;
   @Column(name = "level")
   private int niveau;
-  @OneToOne(fetch = FetchType.LAZY)
+  @OneToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "person_id")
   private Personne personne;
-  @OneToOne(fetch = FetchType.LAZY)
+  @OneToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "boss_id")
   private Personne responssable;
 

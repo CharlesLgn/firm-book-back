@@ -13,7 +13,7 @@ public class UtilisateurService {
   @Path("/connect")
   @Produces({MediaType.APPLICATION_JSON})
   public Response isValid(@HeaderParam("Authorization") String auth) {
-    return new ConnectionHelper().connetion(auth, user -> Response.ok().entity(user).build());
+    return new ConnectionHelper().connexion(auth, user -> Response.ok().entity(user).build());
   }
 
 }

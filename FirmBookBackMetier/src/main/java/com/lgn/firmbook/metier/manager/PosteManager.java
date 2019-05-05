@@ -8,7 +8,7 @@ import java.util.List;
 
 public class PosteManager extends HibernateFactory<Poste> {
 
-  PosteManager() {
+  public PosteManager() {
     super(Poste.class);
   }
 
@@ -16,6 +16,16 @@ public class PosteManager extends HibernateFactory<Poste> {
   public List<Poste> getAll() {
     Session session = getSession();
     Query query = session.createQuery("SELECT poste from Poste as poste");
-    return (List<Poste>)query.getResultList();
+    List<Poste> res = (List<Poste>)query.getResultList();
+    session.close();
+    return res;
+  }
+
+  public List<Poste> getAllNonAssign() {
+    Session session = getSession();
+    Query query = session.createQuery("SELECT poste from Poste as poste where poste.personne is null");
+    List<Poste> res = (List<Poste>)query.getResultList();
+    session.close();
+    return res;
   }
 }

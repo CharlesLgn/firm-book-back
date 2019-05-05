@@ -16,6 +16,8 @@ public class PersonneManager extends HibernateFactory<Personne> {
   public List<Personne> getAll() {
     Session session = getSession();
     Query query = session.createQuery("SELECT person from Personne as person");
-    return (List<Personne>)query.getResultList();
+    List<Personne> res = (List<Personne>)query.getResultList();
+    session.close();
+    return res;
   }
 }

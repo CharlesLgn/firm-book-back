@@ -16,6 +16,8 @@ public class SexeManager extends HibernateFactory<Sexe> {
   public List<Sexe> getAll() {
     Session session = getSession();
     Query query = session.createQuery("SELECT sexe from Sexe as sexe");
-    return (List<Sexe>)query.getResultList();
+    List<Sexe> res = (List<Sexe>)query.getResultList();
+    session.close();
+    return res;
   }
 }

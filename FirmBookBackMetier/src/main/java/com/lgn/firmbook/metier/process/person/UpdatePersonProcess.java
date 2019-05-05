@@ -8,6 +8,9 @@ import com.lgn.firmbook.metier.objet.data.DataPerson;
 
 import java.util.function.BiConsumer;
 
+/**
+ * Met à jour une personne
+ */
 public class UpdatePersonProcess {
 
   public Personne update(int id, DataPerson data) {

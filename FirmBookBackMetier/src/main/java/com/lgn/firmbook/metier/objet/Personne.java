@@ -14,9 +14,9 @@ public class Personne implements Serializable {
   @Column(name = "id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
-  @Column(name = "first_name")
-  private String nom;
   @Column(name = "last_name")
+  private String nom;
+  @Column(name = "first_name")
   private String prenom;
   @Column(name = "birth_date")
   private Date dateDeNaissance;

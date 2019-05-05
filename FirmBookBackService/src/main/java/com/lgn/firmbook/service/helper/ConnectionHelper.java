@@ -14,7 +14,7 @@ import com.lgn.firmbook.metier.process.UserConnectionProcess;
 
 public class ConnectionHelper {
 
-  public Response connetion(String auth, Function<Utilisateur, Response> dataToSend) {
+  public Response connexion(String auth, Function<Utilisateur, Response> dataToSend) {
     String[] data = getAuth(auth);
     if (data == null || data.length < 2) {
       return Response.status(FORBIDDEN).build();

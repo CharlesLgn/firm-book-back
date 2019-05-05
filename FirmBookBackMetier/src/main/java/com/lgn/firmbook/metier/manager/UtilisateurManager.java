@@ -17,13 +17,17 @@ public class UtilisateurManager extends HibernateFactory<Utilisateur> {
     Query query = session.createQuery("SELECT utilisateur from Utilisateur as utilisateur where utilisateur.login = :user and utilisateur.motDePasse = :psw");
     query.setParameter("user", user);
     query.setParameter("psw", psw);
-    return (Utilisateur)query.getSingleResult();
+    Utilisateur res = (Utilisateur)query.getSingleResult();
+    session.close();
+    return res;
   }
 
   @Override
   public List<Utilisateur> getAll() {
     Session session = getSession();
     Query query = session.createQuery("SELECT utilisateur from Utilisateur as utilisateur");
-    return (List<Utilisateur>)query.getResultList();
+    List<Utilisateur> res = (List<Utilisateur>)query.getResultList();
+    session.close();
+    return res;
   }
 }

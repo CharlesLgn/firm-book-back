@@ -25,5 +25,14 @@ ___Rules of the project :___
  - ORM : `Hibernate`
  
 ***
+ 
+___Run the projet :___
+ 
+ - Clone the project
+ - 
+ - `mvn clean install`
+ - `docker-compose up`
+ 
+***
   
 Grades  :   ![grade](https://img.shields.io/badge/17-20-00BB00.svg)

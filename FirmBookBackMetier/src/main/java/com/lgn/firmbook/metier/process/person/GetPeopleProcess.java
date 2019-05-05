@@ -5,6 +5,9 @@ import com.lgn.firmbook.metier.objet.Personne;
 
 import java.util.List;
 
+/**
+ * process pour récupérer toute les personne de la BDD
+ */
 public class GetPeopleProcess {
 
   public List<Personne> get() {
