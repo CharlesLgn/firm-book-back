@@ -27,9 +27,10 @@ ___Rules of the project :___
 ***
  
 ___Run the projet :___
- 
+Prerequisite : Docker
+
  - Clone the project
- - 
+ 
  - `mvn clean install`
  - `docker-compose up`
  
